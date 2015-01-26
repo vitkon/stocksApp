@@ -31,8 +31,6 @@ gulp.task('scripts', function () {
         fullPaths: true
     }));
 
-    bundler.on('update', rebundle);
-
     function rebundle() {
         return bundler.bundle()
             // log errors if they happen
@@ -40,6 +38,8 @@ gulp.task('scripts', function () {
             .pipe(source(destFileName))
             .pipe(gulp.dest(destFolder));
     }
+
+    bundler.on('update', rebundle);
 
     return rebundle();
 
