@@ -1,0 +1,71 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/";
+
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+
+
+body, html {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #efefef;
+}
+
+.ticker {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 15px;
+    display: inline-block;
+    width: 180px;
+    position: relative;
+    margin-right: 10px;
+
+    &__company {
+        color: #999;
+        text-align: right;
+        font-size: 0.55rem;
+        line-height: 1rem;
+        padding-left: 50px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #999;
+    }
+
+    &__symbol {
+        color: #333;
+        font-size: 1rem;
+        position: absolute;
+        vertical-align: bottom;
+    }
+
+    &__price {
+        font-size: 2.4rem;
+    }
+
+    &__change {
+        font-size: 0.75rem;
+
+        &-value {
+
+            &--up {
+                color: #92d400;
+            }
+
+            &--down {
+                color: #ff0000;
+            }
+        }
+
+    }
+}
